@@ -1,6 +1,10 @@
+
+#Create a project using Java that contains test(s) for the following endpoint: 'https://www.virgingames.com/bingo/GetBingoLobbyFeed.do'
+#e.g. 'defaultGameFrequency' should always be '300000' or 'startTime' should always be future timestamp or any other values you can assert.
+
 Feature: Validating different values for virgingames application
 
-
+@SMOKE
   Scenario: Check that user can get access data with valid path and end points
     When    User sends a GET request with '/bingo' path and '/GetBingoLobbyFeed.do' end point
     Then    User gets valid status code '200'

@@ -8,7 +8,9 @@ import net.thucydides.core.annotations.Steps;
 
 public class CheckStatusCodeSteps {
 
+    //variable declaration to store values of response, so that we can use it for multiple steps if needed
     static ValidatableResponse response;
+
 
     @Steps
     GamesSteps gamesSteps;
@@ -16,7 +18,7 @@ public class CheckStatusCodeSteps {
     @When("^User sends a GET request with '/bingo' path and '/GetBingoLobbyFeed\\.do' end point$")
     public void userSendsAGETRequestWithBingoPathAndGetBingoLobbyFeedDoEndPoint() {
 
-        response = gamesSteps.checkStatusCode();
+        gamesSteps.sendGETRequest();
     }
 
     @Then("^User gets valid status code '200'$")
