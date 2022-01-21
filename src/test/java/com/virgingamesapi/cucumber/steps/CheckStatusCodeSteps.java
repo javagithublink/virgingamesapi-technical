@@ -11,7 +11,7 @@ public class CheckStatusCodeSteps {
     //variable declaration to store values of response, so that we can use it for multiple steps if needed
     static ValidatableResponse response;
 
-
+    //@Steps to initialise object of GamesSteps class
     @Steps
     GamesSteps gamesSteps;
 

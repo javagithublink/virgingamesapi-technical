@@ -9,8 +9,8 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>virgingamesapi-technical</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+
+  <url>https://www.virgingames.com/bingo/GetBingoLobbyFeed.do/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

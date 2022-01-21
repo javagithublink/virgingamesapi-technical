@@ -32,7 +32,7 @@ public class GamesSteps extends TestUtils {
     private static final Logger log = LogManager.getLogger(GamesSteps.class.getName());
 
 
-
+    //@Step shows step info onto serenity report
     @Step ("Sending GET request")
     public void sendGETRequest(){
         log.info("Sending GET request");
@@ -75,10 +75,9 @@ public class GamesSteps extends TestUtils {
             if (DefaultGameFrequency != null) {
                 Assert.assertThat(DefaultGameFrequency, greaterThanOrEqualTo(300000));
                 log.info("DefaultGameFrequency is " + DefaultGameFrequency);
-                System.out.println("DefaultGameFrequency is " + DefaultGameFrequency);
             } else {
                 log.info("DefaultGameFrequency is null");
-                System.out.println("DefaultGameFrequency is null");
+
             }
         }
     }
@@ -102,13 +101,9 @@ public class GamesSteps extends TestUtils {
         log.info("Verifying games timestamps are in future");
         for (long startTime : startTimeList) {
             log.info("The current time is: " + currentTimeStamp);
-            System.out.println("The current time is: " + currentTimeStamp);
             log.info("The start time is: " + startTime);
-            System.out.println("The start time is: " + startTime);
             log.info("Verifying games timestamps are in future");
             Assert.assertThat(startTime, greaterThan(currentTimeStamp));
-            System.out.println("----------------------------------------");
-
         }
     }
 }
